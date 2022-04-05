@@ -1,0 +1,13 @@
+1) HDLs support blocking and nonblocking assignments in an [always/
+process] statement. A group of blocking assignments are evaluated in the
+order in which they appear in the code, just as one would expect in a standard
+programming language. A group of nonblocking assignments are
+evaluated concurrently; all of the statements are evaluated before any of
+the signals on the left hand sides are updated.
+
+2) In a SystemVerilog [always] statement, = indicates a blocking
+assignment and <= indicates a nonblocking assignment (also
+called a concurrent assignment).
+Do not confuse either type with continuous assignment
+using the [assign] statement. [assign] statements must be used outside
+[always] statements and are also evaluated concurrently.

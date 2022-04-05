@@ -1,0 +1,10 @@
+DATA TYPES
+1)Nearly all SystemVerilog signals can be [logic]. The exception is 
+that signals with multiple drivers (e.g., a tristate bus) must be declared as a net.
+
+2)When a [tri] net is driven to a single value by one or more drivers, it
+takes on that value. When it is undriven, it floats (z). When it is driven to
+a different value (0, 1, or x) by multiple drivers, it is in contention (x).
+
+3)There are other net types that resolve differently when undriven or
+driven by multiple sources. (Page 214)
